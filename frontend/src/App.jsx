@@ -17,6 +17,7 @@ import TeacherLogin from "./pages/TeacherLogin";
 import TeacherDashboard from "./pages/TeacherDashboard";
 import Lessons from "./pages/Lessons";
 import LoginSelector from "./pages/LoginSelector";
+import Missions from "./pages/Missions";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/lessons/:id" element={<Lesson />} />
           <Route path="/lessons/:id/quiz" element={<Quiz />} />
           <Route path="/lessons/:id/game" element={<Game />} />
+          <Route path="/missions" element={<Missions />} />
           <Route path="/rewards" element={<Rewards />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/" element={<LoginSelector />} />

@@ -78,7 +78,7 @@ export default function TeacherDashboard() {
     localStorage.removeItem("teacherToken");
     setData(null);
     setError(null);
-    navigate("/teacher/login");
+    navigate("/"); // Redirect to login selector page
   };
 
   if (!token) {
