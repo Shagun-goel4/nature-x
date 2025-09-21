@@ -1,0 +1,68 @@
+/* Game-like animations for Nature-X */
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(72, 187, 120, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(72, 187, 120, 0.8); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.eco-card {
+  transition: all 0.3s ease;
+}
+
+.eco-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.badge-item {
+  animation: pulse 2s infinite;
+}
+
+.eco-points {
+  animation: glow 2s infinite;
+  display: inline-block;
+  padding: 0 5px;
+  border-radius: 4px;
+}
+
+.lesson-item {
+  transition: all 0.2s ease;
+}
+
+.lesson-item:hover {
+  transform: translateX(5px);
+}
+
+.leaderboard-item {
+  animation: slideIn 0.5s;
+}
+
+.welcome-title {
+  animation: fadeIn 1s;
+}
+
+.completed-check {
+  animation: bounce 1s infinite;
+  display: inline-block;
+}

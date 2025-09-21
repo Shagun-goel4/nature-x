@@ -16,6 +16,7 @@ import { AuthProvider } from "./context/AuthContext";
 import TeacherLogin from "./pages/TeacherLogin";
 import TeacherDashboard from "./pages/TeacherDashboard";
 import Lessons from "./pages/Lessons";
+import LoginSelector from "./pages/LoginSelector";
 
 function App() {
   return (
@@ -32,7 +33,8 @@ function App() {
           <Route path="/lessons/:id/game" element={<Game />} />
           <Route path="/rewards" element={<Rewards />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
-          <Route path="*" element={<Navigate to="/dashboard" />} />
+          <Route path="/" element={<LoginSelector />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>
     </AuthProvider>

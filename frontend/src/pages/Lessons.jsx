@@ -27,7 +27,25 @@ export default function Lessons() {
           <motion.div key={l._id} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }}>
             <Link to={`/lessons/${l._id}`}>
               <Card className="w-full overflow-hidden cursor-pointer hover:shadow-[0_0_0_2px_rgba(16,185,129,0.35)] transition-shadow">
-                <div className="h-36 bg-gradient-to-br from-emerald-500/30 to-blue-500/20" />
+                <div className="h-36 bg-gradient-to-br from-emerald-500/30 to-blue-500/20 relative overflow-hidden">
+                  <img 
+                    src={
+                      l.title.toLowerCase().includes("waste") 
+                        ? "/waste-segregation-diagram.png" 
+                        : l.title.toLowerCase().includes("energy") 
+                        ? "/WhatsApp Image 2025-09-19 at 10.51.39_d43290c2.jpg"
+                        : l.title.toLowerCase().includes("climate") 
+                        ? "/WhatsApp Image 2025-09-19 at 10.51.39_2cc077a0.jpg"
+                        : l.title.toLowerCase().includes("water") 
+                        ? "/WhatsApp Image 2025-09-19 at 10.51.40_2a90a30e.jpg"
+                        : l.title.toLowerCase().includes("biodiversity") 
+                        ? "/WhatsApp Image 2025-09-19 at 10.51.40_cdda455e.jpg"
+                        : "/WhatsApp Image 2025-09-19 at 10.51.41_85f42638.jpg"
+                    } 
+                    alt={l.title}
+                    className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
+                  />
+                </div>
                 <CardHeader>
                   <CardTitle>{l.title}</CardTitle>
                 </CardHeader>

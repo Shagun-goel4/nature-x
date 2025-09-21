@@ -42,7 +42,23 @@ export default function Lesson() {
           </CardHeader>
           <CardContent>
             <div className="mb-6">
-              {/* <img src="/Public/waste-segregation-diagram.png" alt="Lesson visual" className="w-full rounded-xl border border-white/10" /> */}
+              <img 
+                src={
+                  lesson.title.toLowerCase().includes("waste") 
+                    ? "/waste-segregation-diagram.png" 
+                    : lesson.title.toLowerCase().includes("energy") 
+                    ? "/WhatsApp Image 2025-09-19 at 10.51.39_d43290c2.jpg"
+                    : lesson.title.toLowerCase().includes("climate") 
+                    ? "/WhatsApp Image 2025-09-19 at 10.51.39_2cc077a0.jpg"
+                    : lesson.title.toLowerCase().includes("water") 
+                    ? "/WhatsApp Image 2025-09-19 at 10.51.40_2a90a30e.jpg"
+                    : lesson.title.toLowerCase().includes("biodiversity") 
+                    ? "/WhatsApp Image 2025-09-19 at 10.51.40_cdda455e.jpg"
+                    : "/WhatsApp Image 2025-09-19 at 10.51.41_85f42638.jpg"
+                } 
+                alt={`${lesson.title} visual`} 
+                className="w-full rounded-xl border border-white/10 shadow-lg max-h-64 object-contain mx-auto" 
+              />
             </div>
             {lesson.pages && lesson.pages[page] && (
               <div className="flex flex-col justify-center items-center h-full w-full">

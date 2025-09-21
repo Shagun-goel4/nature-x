@@ -54,21 +54,21 @@ export default function Login() {
         <p className="text-white/70 text-sm mt-2">Earn eco-points by learning and playing.</p>
       </div>
       <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="w-full max-w-md">
-        <Card className="overflow-hidden">
+        <Card className="overflow-hidden bg-black/40 backdrop-blur-sm border border-white/10 shadow-lg">
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl">{isRegister ? "Create your account" : "Sign in"}</CardTitle>
+            <CardTitle className="text-2xl text-white">{isRegister ? "Create your account" : "Sign in"}</CardTitle>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-3">
               <input
-                className="w-full rounded-lg bg-white/10 border border-white/10 px-3 py-2 placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-brand-400"
+                className="w-full rounded-lg bg-black/30 border border-white/10 px-3 py-2 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-emerald-400"
                 placeholder="Username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 required
               />
               <input
-                className="w-full rounded-lg bg-white/10 border border-white/10 px-3 py-2 placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-brand-400"
+                className="w-full rounded-lg bg-black/30 border border-white/10 px-3 py-2 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-emerald-400"
                 type="password"
                 placeholder="Password"
                 value={password}
@@ -77,7 +77,7 @@ export default function Login() {
               />
               {isRegister && (
                 <input
-                  className="w-full rounded-lg bg-white/10 border border-white/10 px-3 py-2 placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-brand-400"
+                  className="w-full rounded-lg bg-black/30 border border-white/10 px-3 py-2 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-emerald-400"
                   placeholder="School"
                   value={school}
                   onChange={(e) => setSchool(e.target.value)}
@@ -85,12 +85,12 @@ export default function Login() {
                 />
               )}
               {error && <div className="text-red-400 text-sm">{error}</div>}
-              <Button type="submit" className="w-full" size="lg">
+              <Button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-700" size="lg">
                 {isRegister ? "Create account" : "Sign in"}
               </Button>
               <button
                 type="button"
-                className="w-full text-white/80 hover:text-white text-sm"
+                className="w-full text-emerald-400 hover:text-emerald-300 text-sm"
                 onClick={() => setIsRegister((r) => !r)}
               >
                 {isRegister ? "Already have an account? Sign in" : "No account? Register"}

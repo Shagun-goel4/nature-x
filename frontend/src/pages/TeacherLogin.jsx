@@ -37,17 +37,17 @@ export default function TeacherLogin() {
         <h1 className="text-5xl font-extrabold tracking-tight">NatureX – Teacher</h1>
         <p className="text-white/70 text-sm mt-2">Manage classes, modules, and missions.</p>
       </div>
-      <Card className="max-w-md w-full">
+      <Card className="max-w-md w-full bg-black/40 backdrop-blur-sm border border-white/10 shadow-lg">
         <CardHeader className="text-center">
-          <CardTitle className="text-2xl">{isRegister ? "Create teacher account" : "Teacher sign in"}</CardTitle>
+          <CardTitle className="text-2xl text-white">{isRegister ? "Create teacher account" : "Teacher sign in"}</CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={submit} className="space-y-3">
-            <input className="w-full rounded-lg bg-white/10 border border-white/10 px-3 py-2" placeholder="Username" value={username} onChange={(e)=>setUsername(e.target.value)} required />
-            <input className="w-full rounded-lg bg-white/10 border border-white/10 px-3 py-2" type="password" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)} required />
+            <input className="w-full rounded-lg bg-black/30 border border-white/10 px-3 py-2 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-emerald-400" placeholder="Username" value={username} onChange={(e)=>setUsername(e.target.value)} required />
+            <input className="w-full rounded-lg bg-black/30 border border-white/10 px-3 py-2 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-emerald-400" type="password" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)} required />
             {error && <div className="text-red-400 text-sm">{error}</div>}
-            <Button type="submit" className="w-full">{isRegister ? "Create account" : "Sign in"}</Button>
-            <button type="button" className="w-full text-white/80 hover:text-white text-sm" onClick={()=>setIsRegister(v=>!v)}>
+            <Button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-700">{isRegister ? "Create account" : "Sign in"}</Button>
+            <button type="button" className="w-full text-emerald-400 hover:text-emerald-300 text-sm" onClick={()=>setIsRegister(v=>!v)}>
               {isRegister ? "Already have an account? Sign in" : "No account? Register"}
             </button>
           </form>

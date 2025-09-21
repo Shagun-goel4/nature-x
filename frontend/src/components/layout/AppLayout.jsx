@@ -16,7 +16,6 @@ export default function AppLayout({ children }) {
             <Link className="px-3 py-1.5 rounded-lg hover:bg-white/10" to="/lessons">Lessons</Link>
             <Link className="px-3 py-1.5 rounded-lg hover:bg-white/10" to="/leaderboard">Leaderboard</Link>
             <Link className="px-3 py-1.5 rounded-lg hover:bg-white/10" to="/rewards">Rewards</Link>
-            <Link className="px-3 py-1.5 rounded-lg hover:bg-white/10" to="/teacher/login">Teacher Login</Link>
           </nav>
         </div>
       </header>
