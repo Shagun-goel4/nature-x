@@ -29,10 +29,9 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
-    //app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-    app.get("/", (req, res) => {
-    res.json({ message: "Backend is working!" });
-  });
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+   
   })
   .catch((err) => console.error(err));
+
 
